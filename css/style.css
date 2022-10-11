@@ -8,6 +8,13 @@ body {
     overflow-x: hidden;
 }
 
+#container i:hover,
+.sidebaricon:hover,
+img:hover,
+li:hover {
+    cursor: pointer;
+}
+
 /* Header */
 
 #header {
@@ -39,8 +46,8 @@ body {
     height: 40px;
     transform: scale(1.2);
     box-sizing: border-box;
-
 }
+
 
 #header .YtLogo .card {
     box-sizing: border-box;
@@ -57,7 +64,7 @@ body {
     height: 100%;
 }
 
-#header input {
+#header input[type='text'] {
     width: 541px;
     height: 40px;
     border: 1px solid #aaa;
@@ -67,6 +74,8 @@ body {
     left: 47%;
     transform: translateX(-50%);
 }
+
+
 
 #header .findicon .card {
     position: absolute;
@@ -172,9 +181,54 @@ body {
 
 /* Sidebar */
 
+#smallsidebar {
+    width: 72px;
+    height: 913px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 56px;
+}
+
+#smallsidebar .card {
+    width: 72px;
+    height: 74px;
+    box-sizing: border-box;
+    padding: 16px 0 14px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+#smallsidebar .card:hover {
+    cursor: pointer;
+    background: rgb(243, 241, 241);
+}
+
+#smallsidebar>.card i {
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+
+
+
 #sidebar {
     width: 240px;
     position: fixed;
+    margin-top: -20px;
+    margin-left: -500px;
+}
+
+#sidebarcheck {
+    display: none;
+}
+
+
+/* + 抓相鄰 */
+/* ~ 抓同一層的元素 */
+/* 要抓到#sidebar 所以要將#sidebarcheck放到跟#sidebar同一層 */
+#sidebarcheck:checked~#sidebar {
+    margin-left: 0;
 }
 
 #sidebar .row {
@@ -448,6 +502,7 @@ body {
     width: 1664px;
     margin: 140px 360px 60px 320px;
     padding-right: 100px;
+    background: rgb(249, 249, 249);
     /* padding-bottom: 60px; */
 
 }
