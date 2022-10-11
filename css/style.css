@@ -8,8 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-#container i:hover,
-.sidebaricon:hover,
+#header i:hover,
 img:hover,
 li:hover {
     cursor: pointer;
@@ -492,6 +491,11 @@ li:hover {
     background: rgb(235, 235, 235);
 }
 
+#tag .shortlist:hover,
+#tag .longlist4:hover {
+    background: rgb(223, 220, 220);
+}
+
 #tag li {
     margin: 12px 12px 12px 0;
 }
@@ -503,11 +507,12 @@ li:hover {
     margin: 140px 360px 60px 320px;
     padding-right: 100px;
     background: rgb(249, 249, 249);
-    /* padding-bottom: 60px; */
-
 }
 
+;
+
 /* 橫排範圍 */
+
 #content .row1 {
     width: 1548px;
     margin-bottom: 40px;
@@ -528,6 +533,13 @@ li:hover {
 
 #content .card {
     font-size: 14px;
+}
+
+#content .card:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 1s;
+    transition-delay: 1s;
 }
 
 #content .cardhead img {
